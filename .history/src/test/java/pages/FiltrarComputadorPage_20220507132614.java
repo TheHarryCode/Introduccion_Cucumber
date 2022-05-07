@@ -1,0 +1,25 @@
+package pages;
+
+public class FiltrarComputadorPage extends BasePage{
+
+String locatorClickFiltrarComputador = "//input[@id='searchsubmit']";
+String locatorInputNameFilter = "//input[@id='searchbox']";
+
+
+    public FiltrarComputadorPage() {
+        super(driver);
+    }
+    
+    public void navigateTo(){
+        navigateTo("http://computer-database.gatling.io/computers");
+    }
+
+    public void escribirNombreComputadorFiltrar(){
+        write(locatorInputNameFilter, "ACE");
+    }
+
+    public void clickFiltrarComputador(){
+        clickElement(locatorClickFiltrarComputador);
+    }
+
+}
